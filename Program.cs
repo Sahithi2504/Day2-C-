@@ -63,7 +63,59 @@ namespace MyFirstConsoleApp
             Console.WriteLine("Employee Name is: " + emp_Name);
             Console.WriteLine("Employee Id is : " + emp_id);
             Console.ReadLine();
-           
+
+            // program to create simple calculator using switch case
+            int num1;
+            int num2;
+            string operand;
+            float answer;
+
+            Console.Write("Please enter the first integer: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Please enter an operand (+, -, /, *): ");
+            operand = Console.ReadLine();
+
+            Console.Write("Please enter the second integer: ");
+            num2 = Convert.ToInt32(Console.ReadLine());
+
+            switch (operand)
+            {
+
+                case "-":
+                    answer = num1 - num2;
+                    break;
+
+                case "+":
+                    answer = num1 + num2;
+                    break;
+
+                case "/":
+                    answer = num1 / num2;
+                    break;
+
+                case "*":
+                    answer = num1 * num2;
+                    break;
+
+                default:
+                    answer = 0;
+                    break;
+            }
+            Console.WriteLine(num1.ToString() + " " + operand + " " + num2.ToString() + " = " + answer.ToString());
+            Console.ReadLine();
+
+            //calculate sum of n Natural numbers
+
+            int i, num = 5, sum = 0;
+            for (i = 1; i <= num; i++)
+            {
+                sum = sum + i;
+
+            }
+            Console.WriteLine("Sum of first" + num +
+            " natural numbers = " + sum);
+            Console.ReadLine();
         }
     }
 }
